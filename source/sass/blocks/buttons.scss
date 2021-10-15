@@ -37,7 +37,7 @@
   font-size: 18px;
   line-height: 22px;
   color: $text--w;
-  transition: all .4s;
+  transition: color .4s;
 
   svg {
     fill: currentColor;
@@ -58,8 +58,21 @@
   transition: all .4s;
   opacity: 0;
   pointer-events: none;
-  @include btn
+  overflow: hidden;
+  @include btn;
 
+  span {
+    transition: all .4s;
+    position: relative;
+
+    &::before {
+      content: 'скачать';
+      position: absolute;
+      top: 50%;
+      left: 100%;
+      transform: translate(100%, -50%);
+    }
+  }
 }
 
 .fixed {
@@ -73,3 +86,21 @@
     color: $text--c;
   }
 }
+
+.download-link:hover {
+  background: $color--c;
+
+  span {
+    transform: translateX(-200%);
+    position: relative;
+  }
+}
+
+.download-link:active {
+  background: $color--f;
+}
+
+.login-link:active, .nav-buttons__button:active {
+  font-weight: bold;
+}
+
