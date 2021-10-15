@@ -12,13 +12,13 @@
     top: 0;
     background: $bg--c;
     border-radius: 0 0 0 80%;
-    animation: bg-first .7s ease;
+    animation: bg-first .7s;
     z-index: -1;
   }
 
   &--doc {
     &::before {
-      animation: bg-first2 .7s ease;
+      animation: bg-first2 .5s;
       width: 100%;
       height: 100%;
       border-radius: 0;
@@ -34,7 +34,7 @@
       top: 0;
       background: $bg--c;
       border-radius: 0 0 0 80%;
-      animation: bg-first .7s ease;
+      animation: bg-first .7s;
       z-index: -1;
     }
   }
