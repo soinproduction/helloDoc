@@ -6,42 +6,47 @@ const caseBtn = document.querySelector('.case-btn');
 const btn = document.querySelector('.doc-btn');
 const btnCase = document.querySelector('.case-btn');
 
-document.addEventListener("DOMContentLoaded", function(event) {
-  window.onscroll = function() {fixedHeader()}
 
-  function fixedHeader() {
-    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-      header.classList.add('fixed');
-    } else {
-      header.classList.remove('fixed');
+document.addEventListener("DOMContentLoaded", function(event) {
+
+  if (document.documentElement.clientWidth > 767) {
+    window.onscroll = function() {fixedHeader()}
+
+    function fixedHeader() {
+      if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+        header.classList.add('fixed');
+      } else {
+        header.classList.remove('fixed');
+      }
     }
-  }
+  };
 
   for (let anchor of anchors) {
     anchor.addEventListener('click', function (e) {
       e.preventDefault()
-      const blockID = anchor.getAttribute('href').substr(1)
-      document.getElementById(blockID).scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
-      })
+      const blockID = anchor.getAttribute('data-href').substr(1)
+      let sections =  document.querySelectorAll('.' + blockID);
+      sections.forEach(function(section) {
+        section.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      });
     })
-  }
+  };
 
   AOS.init();
-
-
 
   btn.addEventListener('click', toggleHeader);
   btnCase.addEventListener('click', removeHeader);
 
   function toggleHeader() {
     header.classList.add('light');
-  }
+  };
 
   function removeHeader() {
     header.classList.remove('light');
-  }
+  };
 
 });
 
@@ -84,25 +89,37 @@ for (const accordeon of acc) {
 
 
 function openPage(evt, pageName) {
-  // Объявить все переменные
   var i, tabcontent, tablinks;
 
-  // Получить все элементы с помощью class="tabcontent" и спрятать их
   tabcontent = document.getElementsByClassName("tabcontent");
   for (i = 0; i < tabcontent.length; i++) {
     tabcontent[i].style.display = "none";
   }
 
-  // Получить все элементы с помощью class="tablinks" и удалить class "active"
   tablinks = document.getElementsByClassName("nav-buttons__button");
   for (i = 0; i < tablinks.length; i++) {
     tablinks[i].className = tablinks[i].className.replace(" active", "");
   }
 
-  // Показать текущую вкладку и добавить "active" класс для кнопки, которая открыла вкладку
   document.getElementById(pageName).style.display = "block";
   evt.currentTarget.className += " active";
 }
+
+
+
+
+const mobileMenu = document.querySelector('.mobile-menu');
+const buttons = document.querySelectorAll('.burger');
+
+function toggleActive() {
+  buttons.forEach(button => button.classList.toggle('active'));
+  mobileMenu.classList.toggle('active');
+}
+
+for (const button of buttons) {
+  button.addEventListener('click', toggleActive);
+}
+
 
 
 

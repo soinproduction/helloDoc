@@ -36,7 +36,7 @@
         </li>
 
         <li>
-          <a href="#download" class="download-link">
+          <a href="#" data-href="#anhor" class="download-link">
             <span>
               скачать
             </span>
@@ -44,6 +44,90 @@
         </li>
       </ul>
 
+      <button class="burger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
     </div>
+
+    <div class="mobile-menu">
+      <div class="mobile-menu__top">
+        <a href="index.html" class="logo-mobile">
+          <svg width='42' height='46'>
+            <use href='img/sprite/sprite.svg#logo'></use>
+          </svg>
+        </a>
+
+        <button class="burger mobile-menu__burger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+      <nav class="mobile-menu__nav">
+        <ul class="mobile-menu__list">
+          <li>
+            <button onclick="openPage(event, 'case')" class="nav-buttons__button case-btn active">
+              Пациентам
+            </button>
+          </li>
+
+          <li>
+            <button onclick="openPage(event, 'doc')" class="nav-buttons__button doc-btn">
+              Врачам
+            </button>
+          </li>
+          <li>
+            <a href="doc.html" class="mobile-menu__link"   >Документы</a>
+          </li>
+
+          <li>
+            <a href="#" data-href="#anhor" class="mobile-menu__link">
+              <span>
+                Cкачать
+              </span>
+            </a>
+          </li>
+        </ul>
+
+        <ul class="footer-contact">
+          <li>
+            <a href="tel:+74950000000">+7 (495) 000-00-00</a>
+          </li>
+          <li>
+            <a href="mailto:help@hellodoc.team">help@hellodoc.team</a>
+          </li>
+          <li>
+            <span>
+              По вопросам сотрудничества
+            </span>
+            <a href="mailto:hello.doc@mail.ru">hello.doc@mail.ru</a>
+          </li>
+        </ul>
+
+        <ul class="menu-social">
+          <li>
+            <a href="#">
+              <svg width='40' height='40'>
+                <use href='img/sprite/sprite.svg#m1'></use>
+              </svg>
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <svg width='40' height='40'>
+                <use href='img/sprite/sprite.svg#m2'></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+
+
+      </nav>
+    </div>
+
   </div>
 </header>

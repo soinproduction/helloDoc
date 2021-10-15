@@ -1,0 +1,132 @@
+.mobile-menu {
+  padding: 10px;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity .4s;
+  transform: translateY(-120%);
+  background: $bg--c;
+  z-index: 30;
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 22px;
+  }
+
+  .logo-mobile svg {
+    fill: $bg--w;
+  }
+
+  &.active {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+
+
+  &__list {
+    display: grid;
+    justify-content: center;
+    grid-gap: 22px;
+    margin-bottom: 52px;
+
+    li, .nav-buttons__button {
+      text-align: center;
+      color: $text--w;
+      font-family: $font-family;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 22px;
+    }
+  }
+
+  .footer-contact {
+    display: grid;
+    grid-gap: 16px;
+    margin-bottom: 24px;
+
+    li {
+      font-family: $font-family;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 17px;
+      text-align: center;
+      color: $text--w;
+
+      &:last-child {
+        font-weight: normal;
+      }
+    }
+  }
+
+  .menu-social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-gap: 34px;
+  }
+
+
+
+}
+
+
+.burger {
+  display: flex;
+  flex-direction: column;
+  grid-gap: 4px;
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transition: all .4s;
+
+  span {
+    width: 20px;
+    height: 2px;
+    background: $bg--c;
+    border-radius: 10px;
+    transition: all .4s;
+  }
+
+  &.active {
+    transform: rotate(360deg);
+
+    span:nth-child(2) {
+      opacity: 0;
+    }
+
+    span:nth-child(1) {
+      transform: rotate(45deg) translate(4.5px,3.4px);
+    }
+
+    span:nth-child(3) {
+      transform: rotate(-45deg) translate(4.5px,-5px);
+    }
+  }
+}
+
+
+.mobile-menu__burger {
+  span {
+    background: $bg--w;
+  }
+}
+
+
+.header .burger {
+  position: fixed;
+  z-index: 20;
+  right: 10px;
+  top: 14px;
+  background: $bg--w;
+}
+
+
