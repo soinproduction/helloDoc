@@ -3,22 +3,6 @@
     color: $text--w;
   }
 
-  .fixed {
-    .nav-buttons__button {
-      color: $text--c;
-    }
-
-    .header-logo svg {
-      fill: $color--c;
-      transition: all 0.4s;
-    }
-  }
-
-  .header-logo svg {
-    fill: $color--w;
-    transition: all 0.4s;
-  }
-
   .how-list__article p, .how-list__title {
     color: $text--e;
   }
@@ -39,3 +23,27 @@
     fill: $color--a;
   }
 }
+
+.light {
+
+  .header-logo svg {
+    fill: $color--w;
+    transition: all 0.4s;
+  }
+}
+
+.light.fixed {
+  .nav-buttons__button {
+    color: $text--c;
+  }
+
+  .header-logo svg {
+    fill: $color--c;
+    transition: all 0.4s !important;
+  }
+
+}
+
+
+
+
