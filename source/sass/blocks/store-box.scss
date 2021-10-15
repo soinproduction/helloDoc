@@ -1,0 +1,10 @@
+.store-box {
+  display: flex;
+  align-items: center;
+  grid-gap: 70px;
+
+  &__list {
+    display: grid;
+    grid-gap: 14px;
+  }
+}

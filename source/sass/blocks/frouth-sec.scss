@@ -1,0 +1,50 @@
+.frouth-sec {
+  padding: 180px 0;
+  background: $bg--w;
+
+  &__left {
+    max-width: 324px;
+    width: 100%;
+    flex-shrink: 0;
+  }
+
+  &__title {
+    font-family: $font-family;
+    font-style: normal;
+    font-weight: bold;
+    color: $text--e;
+  }
+
+  &__top {
+    margin-bottom: 40px;
+  }
+
+  &__subtitle {
+    font-family: $font-family;
+    font-style: normal;
+    font-weight: bold;
+    color: $text--e;
+    margin-bottom: 10px;
+    display: inline-flex;
+  }
+
+  &__descr {
+    font-family: $font-family;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: $text--e;
+    margin-bottom: 30px;
+    display: inline-flex;
+  }
+
+  &__box {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    grid-gap: 30px;
+  }
+
+
+}

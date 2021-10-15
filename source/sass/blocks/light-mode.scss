@@ -1,0 +1,41 @@
+.light {
+  .nav-buttons__button {
+    color: $text--w;
+  }
+
+  .fixed {
+    .nav-buttons__button {
+      color: $text--c;
+    }
+
+    .header-logo svg {
+      fill: $color--c;
+      transition: all 0.4s;
+    }
+  }
+
+  .header-logo svg {
+    fill: $color--w;
+    transition: all 0.4s;
+  }
+
+  .how-list__article p, .how-list__title {
+    color: $text--e;
+  }
+
+  .how-list__step {
+    color: $text--d;
+  }
+
+  .third-sec {
+    background: $bg--w;
+  }
+
+  .first-sec__list li, .first-sec__title {
+    color: $text--w;
+  }
+
+  .first-sec__partners svg {
+    fill: $color--a;
+  }
+}

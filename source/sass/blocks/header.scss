@@ -1,0 +1,33 @@
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  background: transparent;
+  transition: all .2s;
+  &.fixed {
+    background: $bg--w;
+    // box-shadow: 0px 20px 20px 0px rgba(145, 145, 145, 0.15);
+
+    .header {
+      padding: 15px 0 10px;
+    }
+  }
+}
+
+.header {
+  padding: 40px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  transition: all .2s;
+
+  .header-logo svg {
+    fill: $color--c;
+    transition: all .4s;
+  }
+}
+

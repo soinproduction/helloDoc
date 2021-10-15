@@ -1,0 +1,16 @@
+.third-sec {
+  padding: 100px 0;
+  background: $bg--f;
+
+  &__title {
+    font-family: $font-family;
+    font-style: normal;
+    font-weight: bold;
+    color: $text--w;
+  }
+
+  &__top {
+    margin-bottom: 80px;
+  }
+}
+

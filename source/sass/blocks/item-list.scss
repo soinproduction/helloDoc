@@ -1,0 +1,37 @@
+.items-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__item {
+    width: calc(100% / 3 - 26px);
+    background: $bg--a;
+    border-radius: 10px;
+    padding: 20px 20px 0;
+
+    svg {
+      margin-left: auto;
+      display: block;
+      max-width: 100px;
+      width: 100%;
+    }
+
+    &:nth-child(2) svg {
+      transform: translateY(-10px);
+    }
+  }
+
+  &__title {
+    margin-bottom: 14px;
+  }
+
+  &__sublist {
+    display: grid;
+    grid-gap: 16px;
+
+    p {
+      font-size: Min(4.375vw,16px);
+      line-height: Min( 5.313vw,20px);
+    }
+  }
+}

@@ -1,0 +1,49 @@
+.how-list {
+  display: grid;
+  grid-gap: 70px;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+  }
+
+  &__descr, &__image {
+    width: 41%;
+  }
+
+  &__step {
+    font-size: 14px;
+    line-height: 17px;
+    font-family: $font-family;
+    font-style: normal;
+    font-weight: normal;
+    color: $text--a;
+  }
+
+  &__title {
+    font-family: $font-family;
+    font-style: normal;
+    font-weight: bold;
+    color: $text--w;
+    margin-bottom: 16px;
+  }
+
+  &__article {
+    display: grid;
+    grid-gap: 18px;
+
+    p {
+      font-family: $font-family;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 17px;
+      color: $text--w;
+    }
+  }
+}

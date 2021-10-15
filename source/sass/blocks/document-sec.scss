@@ -1,0 +1,45 @@
+.document-sec {
+  padding: 218px 0 234px;
+
+  &__title {
+    font-family: $font-family;
+    font-style: normal;
+    font-weight: bold;
+    color: $text--e;
+  }
+
+  &__top {
+    margin-bottom: 68px;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    grid-gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    max-width: calc(25% - 16px);
+    width: 100%;
+    padding: 20px;
+    background: $bg--a;
+    border-radius: 20px;
+
+    a {
+      display: flex;
+      grid-gap: 10px;
+      font-size: Min(3.750vw ,16px);
+      line-height: Min( 4.688vw,20px);
+
+      /* text */
+
+      color: #373D47;
+
+      svg {
+        max-width: 28px;
+        width: 100%;
+      }
+    }
+  }
+}

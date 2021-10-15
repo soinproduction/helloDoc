@@ -1,0 +1,46 @@
+.fifth-sec {
+  padding: 100px 0;
+  background: $bg--a;
+
+  &__box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__image {
+    width: 50%;
+  }
+
+  &__coll {
+    max-width: 453px;
+    width: 100%;
+    flex-shrink: 0;
+  }
+
+  &__top  {
+    margin-bottom: 70px;
+  }
+
+  &__logo {
+    margin-bottom: 30px;
+  }
+
+  &__title {
+    font-family: $font-family;
+    font-style: normal;
+    font-weight: bold;
+    color: $text--c;
+    margin-bottom: 10px;
+  }
+
+  &__descr {
+    display: inline-flex;
+    font-family: $font-family;
+    font-style: normal;
+    font-weight: normal;
+    font-size: Min( 4.375vw,18px);
+    line-height: Min(5.313vw, 22px);
+    color: $text--e;
+  }
+}

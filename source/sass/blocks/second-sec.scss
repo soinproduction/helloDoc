@@ -1,0 +1,15 @@
+.second-sec {
+  padding: 180px 0;
+  background: $bg--w;
+
+  &__top {
+    margin-bottom: 60px;
+  }
+
+  &__title {
+    font-family: $font-family;
+    font-style: normal;
+    font-weight: bold;
+    color: $text--e;
+  }
+}

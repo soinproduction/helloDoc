@@ -1,0 +1,75 @@
+.nav-buttons {
+  display: flex;
+  grid-gap: 60px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 12.614vw;
+
+  &__button {
+    font-family: $font-family;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: $text--c;
+
+    &.active {
+      font-weight: bold;
+    }
+  }
+}
+
+.header-buttons {
+  display: flex;
+  align-items: center;
+  grid-gap: 85px;
+}
+
+.login-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-gap: 14px;
+  font-family: $font-family;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  color: $text--w;
+  transition: all .4s;
+
+  svg {
+    fill: currentColor;
+  }
+}
+
+.download-link {
+  width: 195px;
+  height: 54px;
+  background: $color--c;
+  border-radius: 60px;
+  color: $text--w;
+  font-family: $font-family;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+  transition: all .4s;
+  opacity: 0;
+  pointer-events: none;
+  @include btn
+
+}
+
+.fixed {
+
+  .download-link {
+    pointer-events: initial;
+    opacity: 1;
+  }
+
+  .login-link {
+    color: $text--c;
+  }
+}
