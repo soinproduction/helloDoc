@@ -16,7 +16,11 @@
 
   .first-sec::before {
     max-width: 412px;
-    border-radius:0 0 0 50vw;
+    border-radius: 0 0 0 50vw;
+  }
+
+  .first-sec--doc::before {
+    max-width: 120% ;
   }
 
   .items-list {
