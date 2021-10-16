@@ -55,42 +55,20 @@ document.addEventListener("DOMContentLoaded", function(event) {
 // --------------------------------------------------------------------
 // ----  акордион  -----
 
-const accordeon = {
-  CLASS: 'accordion',
-  CLASS_ACTIVE: 'active',
-}
+var acc = document.getElementsByClassName("accordion");
+var i;
 
-const acc = document.querySelectorAll(`.${accordeon.CLASS}`);
-let openedAccordeon = null;
-
-function closeAccordeon(acc) {
-  acc.nextElementSibling.style.maxHeight = 0;
-  acc.classList.remove(accordeon.CLASS_ACTIVE);
-}
-
-function openAccordeon(acc) {
-  acc.nextElementSibling.style.maxHeight = `${acc.nextElementSibling.scrollHeight}px`;
-  acc.classList.add(accordeon.CLASS_ACTIVE);
-}
-
-function isAccordeonOpen(acc) {
-  acc.nextElementSibling && !acc.nextElementSibling.style.maxHeight
-}
-
-for (const accordeon of acc) {
-  accordeon.addEventListener("click", function () {
-    const currentAccordeon = this;
-
-    openedAccordeon && closeAccordeon(openedAccordeon);
-
-    if (isAccordeonOpen(currentAccordeon)) {
-      closeAccordeon(currentAccordeon);
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
     } else {
-      openAccordeon(currentAccordeon);
-      openedAccordeon = currentAccordeon;
+      panel.style.maxHeight = panel.scrollHeight + "px";
     }
   });
-};
+}
 
 // ----  акордион  -----
 // --------------------------------------------------------------------
