@@ -1,0 +1,67 @@
+.light {
+
+
+}
+
+.login-link:hover {
+  color: #F2F5F8;
+}
+
+.fixed .login-link:hover {
+  color: #455ABF;
+}
+
+
+.nav-buttons__button:hover {
+  color: #455ABF;
+}
+
+.document-sec__item:hover {
+  background: rgba(191, 191, 213, 0.35);
+}
+
+
+.mobile-menu__list {
+  position: relative;
+
+  li {
+    width: fit-content;
+    position: relative;
+
+    &::before {
+      height: 2.2px;
+      content: '';
+      left: 50%;
+      right: 50%;
+      background-color: #fff;
+      position: absolute;
+      bottom: -3px;
+      transition: all .4s;
+    }
+
+    &:hover {
+      color: #fff;
+
+      &::before {
+        left: 0;
+        right: 0;
+      }
+
+      button {
+        color: #fff;
+      }
+    }
+  }
+}
+
+.nav-link {
+
+  li a:active {
+    color: #5775FF;
+    font-weight: 600;
+  }
+
+  li a:hover {
+    color: #919395;
+  }
+}

@@ -33,10 +33,8 @@ for (const anchor of anchors) {
     document.body.classList.remove('body-fixed');
     mobileMenu.classList.remove('active');
     buttons.forEach(button => button.classList.remove('active'));
-    e.preventDefault()
+    e.preventDefault();
     const blockID = anchor.getAttribute('data-href');
-
-    console.log(blockID)
     let sections =  document.querySelectorAll('.' + blockID);
     sections.forEach(function(section) {
       section.scrollIntoView({

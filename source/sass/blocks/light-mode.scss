@@ -1,6 +1,10 @@
 .light {
   .nav-buttons__button {
     color: $text--w;
+
+    &:hover {
+      color: #F2F5F8;
+    }
   }
 
   .how-list__article p, .how-list__title {

@@ -30,9 +30,7 @@
 
 
   &__list {
-    display: grid;
-    justify-content: center;
-    grid-gap: 22px;
+    text-align: center;
     margin-bottom: 52px;
 
     li, .nav-buttons__button, .anhor-btn {
@@ -43,6 +41,15 @@
       font-weight: bold;
       font-size: 18px;
       line-height: 22px;
+    }
+
+
+    li {
+      margin: 0 auto;
+
+      &:not(:first-child) {
+        margin-top: 22px;
+      }
     }
   }
 
