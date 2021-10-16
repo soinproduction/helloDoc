@@ -10,6 +10,7 @@
   transform: translateY(-120%);
   background: $bg--c;
   z-index: 30;
+  display: none;
 
   &__top {
     display: flex;
@@ -72,13 +73,11 @@
     grid-gap: 34px;
   }
 
-
-
 }
 
 
 .burger {
-  display: flex;
+  display: none;
   flex-direction: column;
   grid-gap: 4px;
   width: 40px;

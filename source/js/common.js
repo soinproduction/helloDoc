@@ -1,17 +1,16 @@
 const header = document.querySelector('header');
 const body = document.body;
-const anchors = document.querySelectorAll('a[href*="#"]');
-const docBtn = document.querySelector('.doc-btn');
-const caseBtn = document.querySelector('.case-btn');
-const btn = document.querySelector('.doc-btn');
-const btnCase = document.querySelector('.case-btn');
+const anchors = document.querySelectorAll('.download-link');
+const mobileMenu = document.querySelector('.mobile-menu');
+const buttons = document.querySelectorAll('.burger');
+const btn = document.querySelectorAll('.doc-btn');
+const btnCase = document.querySelectorAll('.case-btn');
+const btnMode = document.querySelectorAll('.doc-btn-mode');
 
 
-document.addEventListener("DOMContentLoaded", function(event) {
-
+function addClassToHeader(){   // ----  функция липкой шапки   -----
   if (document.documentElement.clientWidth > 767) {
     window.onscroll = function() {fixedHeader()}
-
     function fixedHeader() {
       if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
         header.classList.add('fixed');
@@ -20,35 +19,36 @@ document.addEventListener("DOMContentLoaded", function(event) {
       }
     }
   };
+}
 
-  for (let anchor of anchors) {
-    anchor.addEventListener('click', function (e) {
-      e.preventDefault()
-      const blockID = anchor.getAttribute('data-href').substr(1)
-      let sections =  document.querySelectorAll('.' + blockID);
-      sections.forEach(function(section) {
-        section.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start'
-        });
-      });
-    })
-  };
-
-  AOS.init();
-
-  btn.addEventListener('click', toggleHeader);
-  btnCase.addEventListener('click', removeHeader);
-
-  function toggleHeader() {
-    header.classList.add('light');
-  };
-
-  function removeHeader() {
-    header.classList.remove('light');
-  };
-
+window.addEventListener('resize', () => {
+  addClassToHeader();
 });
+window.addEventListener('DOMContentLoaded', () => {
+  addClassToHeader();
+});
+
+for (const anchor of anchors) {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault()
+    const blockID = anchor.getAttribute('data-href');
+    let sections =  document.querySelectorAll('.' + blockID);
+    sections.forEach(function(section) {
+      section.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    });
+  })
+};
+
+document.addEventListener("DOMContentLoaded", function(event) {
+  // ----  инициализация анимаций  -----
+    AOS.init();
+});
+
+// --------------------------------------------------------------------
+// ----  акордион  -----
 
 const accordeon = {
   CLASS: 'accordion',
@@ -87,8 +87,12 @@ for (const accordeon of acc) {
   });
 };
 
+// ----  акордион  -----
+// --------------------------------------------------------------------
+// ---- переключение страниц -----
 
 function openPage(evt, pageName) {
+  evt.preventDefault()
   var i, tabcontent, tablinks;
 
   tabcontent = document.getElementsByClassName("tabcontent");
@@ -103,27 +107,62 @@ function openPage(evt, pageName) {
 
   document.getElementById(pageName).style.display = "block";
   evt.currentTarget.className += " active";
+
+  mobileMenu.classList.remove('active');
+  buttons.forEach(button => button.classList.remove('active'));
+  document.body.classList.remove('body-fixed');
 }
 
-
-
-
-const mobileMenu = document.querySelector('.mobile-menu');
-const buttons = document.querySelectorAll('.burger');
-
+// ---- переключение страниц -----
+// --------------------------------------------------------------------
+// ---- открытие меню -----
 function toggleActive() {
   buttons.forEach(button => button.classList.toggle('active'));
   mobileMenu.classList.toggle('active');
+  document.body.classList.toggle('body-fixed')
 }
 
 for (const button of buttons) {
   button.addEventListener('click', toggleActive);
 }
+// ---- открытие меню -----
+// --------------------------------------------------------------------
+// ---- добавление класса к шапке (case/doc) -----
+function toggleLight() {
+  header.classList.add('light');
+  goUp()
+}
 
+function removeLight() {
+  header.classList.remove('light');
+  goUp()
+}
 
+for (const button of btnCase) {
+  button.addEventListener('click', removeLight);
+}
 
+for (const button of btn) {
+  button.addEventListener('click', toggleLight);
+}
 
+function toggleLightMode() {
+  header.classList.add('light');
+  btn.forEach(button => button.classList.add('active'));
+  goUp()
+}
 
-
-
-
+for (const button of btnMode) {
+  button.addEventListener('click', toggleLightMode);
+}
+// ---- добавление класса к шапке (case/doc) -----
+// --------------------------------------------------------------------
+// ---- скролл к верху страницы -----
+let timeOut;
+function goUp() {
+   let top = Math.max(document.body.scrollTop,document.documentElement.scrollTop);
+   if(top > 0) {
+      window.scrollBy(0,-100);
+      timeOut = setTimeout('goUp()',20);
+   } else clearTimeout(timeOut);
+}
