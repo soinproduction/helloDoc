@@ -1,6 +1,6 @@
 const header = document.querySelector('header');
 const body = document.body;
-const anchors = document.querySelectorAll('.download-link');
+const anchors = document.querySelectorAll('.anhor-btn');
 const mobileMenu = document.querySelector('.mobile-menu');
 const buttons = document.querySelectorAll('.burger');
 const btn = document.querySelectorAll('.doc-btn');
@@ -9,7 +9,7 @@ const btnMode = document.querySelectorAll('.doc-btn-mode');
 
 
 function addClassToHeader(){   // ----  функция липкой шапки   -----
-  if (document.documentElement.clientWidth > 767) {
+  if (document.documentElement.clientWidth > 992) {
     window.onscroll = function() {fixedHeader()}
     function fixedHeader() {
       if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
@@ -30,8 +30,13 @@ window.addEventListener('DOMContentLoaded', () => {
 
 for (const anchor of anchors) {
   anchor.addEventListener('click', function (e) {
+    document.body.classList.remove('body-fixed');
+    mobileMenu.classList.remove('active');
+    buttons.forEach(button => button.classList.remove('active'));
     e.preventDefault()
     const blockID = anchor.getAttribute('data-href');
+
+    console.log(blockID)
     let sections =  document.querySelectorAll('.' + blockID);
     sections.forEach(function(section) {
       section.scrollIntoView({
@@ -39,7 +44,7 @@ for (const anchor of anchors) {
         block: 'start'
       });
     });
-  })
+  });
 };
 
 document.addEventListener("DOMContentLoaded", function(event) {

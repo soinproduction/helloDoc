@@ -8,7 +8,7 @@
 
   100% {
     height: 100%;
-    width: 47%;
+    width: 46%;
     right: 0;
     top: 0;
   }
@@ -17,34 +17,27 @@
 @keyframes bg-first2 {
   0% {
     height: 100%;
-    width: 47%;
+    width: 46%;
     right: 0;
     top: 0;
-    border-radius: 0 0 0 32vw;
+    border-radius: 0 0 0 42vw;
   }
 
-  50% {
-    border-radius: 0 0 0 150vw;
-  }
-
-  70% {
-    border-radius: 0 0 0 100vw;
-  }
 
   100% {
     height: 120%;
     width: 120%;
     right: 0;
     top: 0;
-    border-radius: 0;
+    border-radius: 0 0 0 42vw;
   }
 }
 
 
-@media (min-width: 320px) and (max-width: 575px) {
+@media (min-width: 320px) and (max-width: 768px) {
   @keyframes bg-first {
     0% {
-      height: 0;
+      height: 40%;
       width: 0;
       right: 0;
       top: 0;
@@ -81,6 +74,45 @@
       right: 0;
       top: 0;
       border-radius: 0;
+    }
+  }
+
+
+}
+
+
+@media (min-width: 768px) and (max-width: 992px) {
+  @keyframes bg-first {
+    0% {
+      height: 100%;
+      width: 0;
+      right: 0;
+      top: 0;
+    }
+
+    100% {
+      height: 100%;
+      width: 100%;
+      right: 0;
+      top: 0;
+    }
+  }
+
+  @keyframes bg-first2 {
+    0% {
+      height: 100%;
+      width: 0%;
+      right: 0;
+      top: 0;
+      border-radius: 0 0 0 50%;
+    }
+
+    100% {
+      height: 120%;
+      width: 120%;
+      right: 0;
+      top: 0;
+      border-radius: 0 0 0 50%;
     }
   }
 

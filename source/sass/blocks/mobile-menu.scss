@@ -35,7 +35,7 @@
     grid-gap: 22px;
     margin-bottom: 52px;
 
-    li, .nav-buttons__button {
+    li, .nav-buttons__button, .anhor-btn {
       text-align: center;
       color: $text--w;
       font-family: $font-family;
@@ -112,6 +112,13 @@
   }
 }
 
+.mobile-menu__link {
+  // opacity: 1;
+  // width: initial;
+  // height: initial;
+  // background: transparent;
+  // margin: 0 auto;
+}
 
 .mobile-menu__burger {
   span {
