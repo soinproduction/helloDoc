@@ -6,8 +6,8 @@
   top: 0;
   left: 0;
   opacity: 0;
-  transition: opacity .4s;
-  transform: translateY(-120%);
+  visibility: hidden;
+  transition: all .4s;
   background: $bg--c;
   z-index: 30;
   display: none;
@@ -25,7 +25,7 @@
 
   &.active {
     opacity: 1;
-    transform: translateY(0%);
+    visibility: visible;
   }
 
 
