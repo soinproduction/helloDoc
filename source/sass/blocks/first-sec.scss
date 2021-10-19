@@ -1,3 +1,29 @@
+.activeAnimate {
+  .first-sec {
+    &::before {
+      animation: bg-first-rev .5s;
+      width: 46%;
+      height: 100%;
+      border-radius: 0 0 0 42vw;
+      background: $bg--c;
+      transition: all .9s;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      height: 100%;
+      width: 0;
+      right: 0;
+      top: 0;
+      background: $bg--c;
+      border-radius: 0 0 0 42vw;
+      animation: bg-first-rev2 .7s;
+      z-index: -1;
+    }
+  }
+}
+
 .first-sec {
   // padding-bottom: 155px;
   // padding-top: 254px;
@@ -98,9 +124,8 @@
 
   &__image {
     position: absolute;
-    bottom: 0;
-    right: -40px;
-    width: 69%;
-    // z-index: 5;
+    bottom: -30%;
+    right: -13%;
+    width: 77%;
   }
 }

@@ -6,6 +6,7 @@ const buttons = document.querySelectorAll('.burger');
 const btn = document.querySelectorAll('.doc-btn');
 const btnCase = document.querySelectorAll('.case-btn');
 const btnMode = document.querySelectorAll('.doc-btn-mode');
+const caseSec = document.getElementById('case');
 
 
 function addClassToHeader(){   // ----  функция липкой шапки   -----
@@ -92,6 +93,12 @@ function openPage(evt, pageName) {
   mobileMenu.classList.remove('active');
   buttons.forEach(button => button.classList.remove('active'));
   document.body.classList.remove('body-fixed');
+  addAnimate();
+
+  function addAnimate(){
+    caseSec.classList.add('activeAnimate');
+  }
+
 }
 
 // ---- переключение страниц -----
