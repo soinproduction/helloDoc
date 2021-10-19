@@ -154,3 +154,14 @@ function goUp() {
       timeOut = setTimeout('goUp()',20);
    } else clearTimeout(timeOut);
 }
+
+
+window.onscroll = function() {fixedBurger()}
+const singleBurger = document.querySelector('.single');
+function fixedBurger() {
+  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+    singleBurger.style.opacity = '1';
+  } else {
+    singleBurger.style.opacity = '0';
+  }
+}

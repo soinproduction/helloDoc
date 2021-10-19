@@ -41,8 +41,8 @@
     right: 0;
     top: 0;
     background: $bg--c;
-    border-radius: 0 0 0 42vw;
-    animation: bg-first .7s;
+    border-radius: 0 0 0 80%;
+    animation: bg-first 1s;
     z-index: -1;
   }
 
@@ -128,4 +128,10 @@
     right: -13%;
     width: 77%;
   }
+}
+
+
+.first-sec__image img {
+  animation: opacity-image 2s;
+  // transition: all .2s;
 }

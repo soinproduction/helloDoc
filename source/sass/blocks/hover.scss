@@ -5,15 +5,21 @@
 
 .login-link:hover {
   color: #F2F5F8;
+  font-size: 18px;
+  font-weight: 600;
 }
 
 .fixed .login-link:hover {
   color: #455ABF;
+  font-size: 18px;
+  font-weight: 600;
 }
 
 
 .nav-buttons__button:hover {
   color: #455ABF;
+  font-size: 18px;
+  font-weight: 600;
 }
 
 .document-sec__item:hover {
@@ -59,9 +65,12 @@
   li a:active {
     color: #5775FF;
     font-weight: 600;
+    font-size: 18px;
   }
 
   li a:hover {
     color: #919395;
+    font-weight: 600;
+    font-size: 18px;
   }
 }

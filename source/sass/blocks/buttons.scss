@@ -10,12 +10,14 @@
     font-family: $font-family;
     font-style: normal;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 22px;
     color: $text--c;
+    transition: all .4s;
 
     &.active {
-      font-weight: bold;
+      font-weight: 600;
+      font-size: 18px;
     }
   }
 }
@@ -34,10 +36,10 @@
   font-family: $font-family;
   font-style: normal;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 22px;
   color: $text--w;
-  transition: color .4s;
+  transition:  .4s;
 
   svg {
     fill: currentColor;
@@ -45,7 +47,7 @@
 }
 
 .download-link {
-  width: 195px;
+  width: 178px;
   height: 54px;
   background: $color--c;
   border-radius: 60px;
@@ -53,7 +55,7 @@
   font-family: $font-family;
   font-style: normal;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 22px;
   transition: all .4s;
   opacity: 0;
@@ -76,7 +78,6 @@
 }
 
 .fixed {
-
   .download-link {
     pointer-events: initial;
     opacity: 1;
@@ -84,20 +85,27 @@
 
   .login-link {
     color: $text--c;
+    transition: all .4s;
   }
 }
 
 .download-link:hover {
   background: $color--c;
+  font-size: 18px;
 
   span {
     transform: translateX(-200%);
     position: relative;
   }
+
+  &::before {
+    font-size: 18px;
+  }
 }
 
 .download-link:active {
   background: $color--f;
+  font-size: 18px;
 }
 
 .login-link:active, .nav-buttons__button:active {

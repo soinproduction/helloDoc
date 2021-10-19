@@ -134,12 +134,18 @@
 }
 
 
-.header .burger {
+header .single {
   position: fixed;
   z-index: 20;
   right: 10px;
   top: 14px;
   background: $bg--w;
+  opacity: 0;
+
+  &.active {
+    z-index: -1;
+    opacity: 0;
+  }
 }
 
 
