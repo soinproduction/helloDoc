@@ -1,11 +1,14 @@
- @media (min-width: 1921px) and (max-width: 4600px) {
-  .container--header {
-    max-width: 1920px;
-    padding: 0 80px;
+ @media screen and (max-width: 1370px) {
+  .nav-buttons {
+    left: 80px;
+    max-width: initial;
+    transform: translateY(-50%);
+    width: auto;
   }
+
  }
 
-@media only  (min-width: 992px) and (max-height: 800px) {
+@media only (min-width: 992px) and (max-height: 800px) {
   .first-sec__title {
     font-size: 30px;
     line-height: 30px;

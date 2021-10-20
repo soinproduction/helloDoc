@@ -3,8 +3,11 @@
   grid-gap: 60px;
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
-  left: 12.614vw;
+  left: 50%;
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 10px;
+  transform: translateY(-50%) translateX(-50%);
 
   &__button {
     font-family: $font-family;
