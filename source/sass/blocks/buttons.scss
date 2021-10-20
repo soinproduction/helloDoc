@@ -29,6 +29,8 @@
   display: flex;
   align-items: center;
   grid-gap: 3vw;
+  position: relative;
+  z-index: 5;
 }
 
 .login-link {
