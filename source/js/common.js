@@ -48,7 +48,23 @@ for (const anchor of anchors) {
 
 document.addEventListener("DOMContentLoaded", function(event) {
   // ----  инициализация анимаций  -----
-    AOS.init();
+
+
+  if (document.documentElement.clientWidth < 1200) {
+    AOS.init({
+      once: true,
+      throttleDelay: 0,
+      anchorPlacement: 'top-top',
+      delay: 0,
+      offset: 10,
+    });
+  } else {
+    AOS.init({
+      once: true,
+      throttleDelay: 10,
+
+    });
+  }
 });
 
 // --------------------------------------------------------------------
@@ -160,8 +176,27 @@ window.onscroll = function() {fixedBurger()}
 const singleBurger = document.querySelector('.single');
 function fixedBurger() {
   if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-    singleBurger.style.opacity = '1';
+    singleBurger.style.background = '#fff';
   } else {
-    singleBurger.style.opacity = '0';
+    singleBurger.style.background = 'transparent';
   }
 }
+
+
+
+// const imageSec = document.querySelector('.case-box');
+// const imageDelay = imageSec.querySelectorAll('.first-sec__image');
+
+
+// for (const item of imageDelay) {
+//     if (document.documentElement.clientWidth < 1200) {
+//       let imageDelayValue = item.getAttribute('data-aos-delay');
+//       imageDelay.innerHTML = imageDelayValue / 5;
+
+//       console.log(imageDelayValue)
+//     }
+
+
+
+
+// };

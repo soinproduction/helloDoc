@@ -61,16 +61,12 @@
 }
 
 .nav-link {
-
   li a:active {
-    color: #5775FF;
-    font-weight: 600;
-    font-size: 18px;
+    color: #5775FF !important;
   }
 
   li a:hover {
     color: #919395;
-    font-weight: 600;
-    font-size: 18px;
+
   }
 }

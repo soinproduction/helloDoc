@@ -133,5 +133,11 @@
 
 .first-sec__image img {
   animation: opacity-image 2s;
-  // transition: all .2s;
+  transition: filter .2s;
+}
+
+.first-sec__box {
+  opacity: 100%;
+  animation: opacity-box 3s;
+  transition-delay: 1s;
 }

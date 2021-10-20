@@ -83,6 +83,17 @@
   }
 }
 
+@keyframes opacity-box {
+  0% {
+    opacity: 0;
+  }
+
+  99% {
+    opacity: 1;
+    animation-play-state: paused;
+  }
+}
+
 
 @media (min-width: 320px) and (max-width: 768px) {
   @keyframes bg-first {
