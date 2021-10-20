@@ -91,24 +91,16 @@
 
 .download-link:hover {
   background: $color--c;
-  font-size: 18px;
+
 
   span {
     transform: translateX(-200%);
     position: relative;
   }
 
-  &::before {
-    font-size: 18px;
-  }
 }
 
 .download-link:active {
   background: $color--f;
-  font-size: 18px;
-}
-
-.login-link:active, .nav-buttons__button:active {
-  font-weight: bold;
 }
 

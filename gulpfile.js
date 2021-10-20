@@ -7,7 +7,7 @@ const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 const server = require("browser-sync").create();
 
-const imagemin = require("gulp-imagemin");
+// const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
 const csso = require("gulp-csso");
 const rename = require("gulp-rename");
@@ -72,24 +72,24 @@ gulp.task("refresh", (done) => {
 
 gulp.task("raster images", () => {
   return gulp.src("build/img/*.{png,jpg,jpeg}")
-    .pipe(imagemin([
-      imagemin.optipng({optimizationLevel: 2}),
-      imagemin.mozjpeg({quality: 75, progressive: true})
-    ]))
+    // .pipe(imagemin([
+    //   imagemin.optipng({optimizationLevel: 0}),
+    //   imagemin.mozjpeg({quality: 0, progressive: false})
+    // ]))
     .pipe(gulp.dest("build/img"));
 });
 
 gulp.task("webp", () => {
   return gulp.src("build/**/*.{png,jpg,jpeg}")
-    .pipe(webp({quality: 90}))
+    .pipe(webp({quality: 0}))
     .pipe(gulp.dest("build"));
 });
 
 gulp.task("vector images", () => {
   return gulp.src("build/img/**/*.svg")
-    .pipe(imagemin([
-      imagemin.svgo()
-    ]))
+    // .pipe(imagemin([
+    //   imagemin.svgo()
+    // ]))
     .pipe(gulp.dest("build/img"));
 });
 
