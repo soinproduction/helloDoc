@@ -1,26 +1,9 @@
-// @media only (max-width: 1200px) and (max-height: 800px) {
-//   .first-sec {
-//     padding-top: 15vh;
-//   }
-
-//   .first-sec__title {
-//     margin-bottom: 25px;
-//   }
-
-//   .first-sec__list {
-//     margin-bottom: 25px;
-//   }
-
-//   .first-sec__partners {
-//     margin-bottom: 25px;
-//   }
-
-//   .first-sec__image {
-//     max-width: 100%;
-//     width: 58%;
-//     right: 0;
-//   }
-// }
+ @media only (min-width: 1920px) and (max-width: 4600px) {
+  .container--header {
+    max-width: 1920px;
+    padding: 0 80px;
+  }
+ }
 
 @media only  (min-width: 992px) and (max-height: 800px) {
   .first-sec__title {
